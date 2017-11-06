@@ -12,12 +12,13 @@ var (
 	maxNonce = math.MaxInt64
 )
 
-// 16 is an arbitrary number, our goal is to have a target that
+// 24 is an arbitrary number, our goal is to have a target that
 // takes less than 256 bits in memory.
 // And we want the difference to be significant enough,
 // but not too big, because the bigger the difference
 // the more difficult it’s to find a proper hash.
 
+// set it to 16 for speed
 const targetBits = 16
 
 type ProofOfWork struct {
