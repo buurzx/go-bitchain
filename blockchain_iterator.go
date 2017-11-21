@@ -23,6 +23,7 @@ func (i *BlockchainIterator) Next() *Block {
 
 		return nil
 	})
+
 	if err != nil {
 		log.Panic(err)
 	}

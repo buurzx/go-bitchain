@@ -28,6 +28,11 @@ func NewBlock(transactions []*Transaction, prevBlockHash []byte) *Block {
 	return block
 }
 
+// NewGenesisBlock creates and returns genesis Block
+func NewGenesisBlock(coinbase *Transaction) *Block {
+	return NewBlock([]*Transaction{coinbase}, []byte{})
+}
+
 // Serialize serializes the block
 func (b *Block) Serialize() []byte {
 	var result bytes.Buffer
